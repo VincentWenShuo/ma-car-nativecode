@@ -7,21 +7,24 @@
 #import "TiUIView.h"
 #import "TiModule.h"
 
-@interface MaCarNativecodeSlideView : TiUIView {
-    UIView *square;
-    TiUIView *touchArea;
+@interface MaCarNativecodeSlideView : TiUIView  {
+    //UIScrollView *scrollview;
+    //TiUIView *touchArea;
     TiUIView *viewContainer;
+    TiUIView *parentContainer;
     
     CGFloat touchWidth;
     CGFloat pageWidth;
     int     pageNum;
     int     curPage;
+    float    duration;
     BOOL    dragging;
     BOOL    moving;
     float   oldX;
     float   oldY;
     float   originX;
     float   startX;
+    BOOL    zooming;
     KrollCallback* moveEndCallback;
 }
 

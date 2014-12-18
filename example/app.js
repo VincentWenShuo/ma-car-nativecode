@@ -16,41 +16,43 @@ Ti.API.info("module is => " + macarnativecode);
 
 //var foo = macarnativecode.createSlideView({
 var foo2 = Ti.UI.createView({
-  "backgroundColor":"#c0c",
-  "top": 0,
+  "backgroundColor":"#00c",
+  "top": 20,
   "left": 0, 
   "width":100,
   "height":300,
 });	
 	
 var foo3 = Ti.UI.createView({
-  "backgroundColor":"#cc0",
-  "top": 0,
+  "backgroundColor":"#0c0",
+  "top": 20,
   "left": 100, 
   "width":100,
   "height":300,
 });		
 	
 var foo1 = Ti.UI.createView({
-  "backgroundColor":"#0cc",
+  "backgroundColor":"#c00",
   "top": 0,
-  "left": 0, 
+  "left": 100, 
   "width":200,
-  "height":300,
+  "height":400,
 });
 foo1.add(foo2);
 foo1.add(foo3);
 
 var foo = macarnativecode.createSlideView({
-  "color":"#c00",
+  //"color":"#c00",
   "top": 50,
-  "left": 100, 
-  "width":200,
-  "height":300,
+  "left": 0, 
+  "width":320,
+  "height":350,
   "touchWidth":100,
   "pageWidth":100,
   "viewContainer": foo1,
   "pageNum": 2,
+  "startLeft": 100,
+  "zoomAnim": false,
   "touchEndCallback": function(res){
   	console.log( res );
   }
